@@ -50,6 +50,65 @@ printf("%d\n",pass);
      printf("section2 has highest avg %f\n",avg2);
      }else{
      printf("both have identical avg %2f\n",avg1);
+     return 0
+     }
+
+     # task 2 
+     #include <stdio.h>
+int main() {
+int arr[2][3][4];
+    int i,j,k,branch1=0,branch2=0,sale1=0,sale2=0,week1=0,week2=0;
+    int weeklysale[4]={0};
+ for(i=0;i<2;i++){
+ for(j=0;j<3;j++){
+     printf("enter 4 weeks sale of 3 products \n");
+ for(k=0;k<4;k++){
+     scanf("%d",&arr[i][j][k]);
+ }
+     }
+ }
+     for(i=0;i<2;i++){
+ for(j=0;j<3;j++){
+    int total=0;
+ for(k=0;k<4;k++){
+    total+=arr[i][j][k];
+    weeklysale[k]+=arr[i][j][k];
+ }
+     printf("total %d\n",total);
+     if(i==0){
+         branch1+=total;
+         if(sale1<total){
+             sale1=total;
+            }
+         }else{
+             branch2+=total;
+         }if(sale2<total){
+             sale2=total;
+            
+         
+     }
+     }
+ }
+    for(k=0;k<4;k++){
+      if( weeklysale[k]>week1){
+          week1=weeklysale[k];
+      }
+    }
+         printf(" highest sale in branch1 %d",sale1);
+         printf(" highest sale in branch1 %d",sale2);
+         printf("highest sale of a week %d\n",week1);
+         if(branch1>branch2){
+             printf("branch1 has greater sales \n");
+         }else if (branch1<branch2){
+             printf("branch2 has greater sales\n ");
+         }else{
+             printf("both has same sales\n");
+         }
+    return 0;
+}
+
+# task 3
+
 
      # task 2
      
