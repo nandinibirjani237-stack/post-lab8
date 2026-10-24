@@ -53,27 +53,9 @@ printf("%d\n",pass);
      return 0
      }
 
-     # task 2 
-   
-    for(k=0;k<4;k++){
-      if( weeklysale[k]>week1){
-          week1=weeklysale[k];
-      }
-    }
-         printf(" highest sale in branch1 %d",sale1);
-         printf(" highest sale in branch1 %d",sale2);
-         printf("highest sale of a week %d\n",week1);
-         if(branch1>branch2){
-             printf("branch1 has greater sales \n");
-         }else if (branch1<branch2){
-             printf("branch2 has greater sales\n ");
-         }else{
-             printf("both has same sales\n");
-         }
-    return 0;
-}
+    
 
-# task 3
+# task 2
 #include <stdio.h>
 int main() {
 int arr[2][3][4];
@@ -125,8 +107,5 @@ int arr[2][3][4];
     return 0;
 }
 
-     # task 2
-     
-     }
-    return 0;
+    
 }
