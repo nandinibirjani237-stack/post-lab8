@@ -104,8 +104,54 @@ int arr[2][3][4];
          }else{
              printf("both has same sales\n");
          }
+         
     return 0;
 }
 
+# task 3
+#include <stdio.h>
+int main() {
+float arr[2][3][4] ,ward1=0.0, ward2=0.0;
+    int i,j,k,reading=0;
+ for(i=0;i<2;i++){
+  for(j=0;j<3;j++){
+     printf("Enter 4 temperature readings for Ward %d, Patient %d:\n ",i + 1, j + 1 );
+ for(k=0;k<4;k++){
+     scanf("%f",&arr[i][j][k]);
+ }
+     }
+ }
+     for(i=0;i<2;i++){
+ for(j=0;j<3;j++){
+    float total=0.0;
+ for(k=0;k<4;k++){
+ total += arr[i][j][k];
+   if(arr[i][j][k]>37.5){
+       reading++;
+   }
+if(i==0){
+    if(arr[i][j][k]>ward1){
+        ward1=arr[i][j][k];
+    }
+}
+    else {
+          if (arr[i][j][k] > ward2) {
+         ward2 = arr[i][j][k];
+                    }
+}
+ }
+     float avg=total/4.0;
+     printf("total avg %f",avg);
+     if(avg>38.0)   {
+         printf("critical");
+     } 
+     printf("\n");
+ } 
+     }
+         printf("highest temp %f\n",ward1);
+          printf("highest temp %f\n",ward2);
+          printf("Total individual readings above 37.5°C %f\n",reading);
+    return 0;
+}
     
 }
